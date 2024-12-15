@@ -277,3 +277,184 @@ print(cars.iloc[:, [2]])
 # Print out cars_per_cap and drives_right as DataFrame
 print(cars.iloc[:, [0, 2]])
 
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Extract drives_right column as Series: dr
+dr = cars["drives_right"]
+
+# Use dr to subset cars: sel
+sel = cars[dr]
+
+# Print sel
+print(sel)
+
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Convert code to a one-liner
+
+sel = cars[cars["drives_right"]]
+
+# Print sel
+print(sel)
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Create car_maniac: observations that have a cars_per_cap over 500
+cpc = cars["cars_per_cap"]
+
+many_cars = cpc > 500
+
+car_maniac = cars[many_cars]
+# Print car_maniac
+print(car_maniac)
+
+script.py
+123456781011121314915
+# Import cars dataimport pandas as pdcars = pd.read_csv('cars.csv', index_col = 0)# Import numpy, you'll need thisimport numpy as np# Create medium: observations with cars_per_cap between 100 and 500between = np.logical_and(cpc > 100, cpc < 500)medium = cars[between]# Print mediumcpc = cars["cars_per_cap"]print(medium)
+
+IPython Shell
+Slides
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Import numpy, you'll need this
+import numpy as np
+
+# Create medium: observations with cars_per_cap between 100 and 500
+cpc = cars["cars_per_cap"]
+medium = np.logical_and(cpc > 100, cpc < 500)
+
+
+
+# Print medium
+print(medium)
+US     False
+AUS    False
+JPN    False
+IN     False
+RU      True
+MOR    False
+EG     False
+Name: cars_per_cap, dtype: bool
+
+<script.py> output:
+    US     False
+    AUS    False
+    JPN    False
+    IN     False
+    RU      True
+    MOR    False
+    EG     False
+    Name: cars_per_cap, dtype: bool
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Import numpy, you'll need this
+import numpy as np
+
+# Create medium: observations with cars_per_cap between 100 and 500
+cpc = cars["cars_per_cap"]
+between = np.logical_and(cpc > 100, cpc < 500)
+medium = cars[between]
+
+
+# Print medium
+print(medium)
+
+    cars_per_cap country  drives_right
+RU           200  Russia          True
+
+
+# Initialize offset
+offset=8
+
+
+
+# Code the while loop
+while offset != 0:
+    print("correcting...")
+    offset = offset - 1
+    print(offset)
+
+correcting...
+7
+correcting...
+6
+correcting...
+5
+correcting...
+4
+correcting...
+3
+correcting...
+2
+correcting...
+1
+correcting...
+0
+
+
+# Initialize offset
+offset = -6
+
+# Code the while loop
+while offset != 0 :
+    print("correcting...")
+    if offset > 0 :
+      offset = offset - 1
+    else : 
+      offset = offset + 1    
+    print(offset)
+
+<script.py> output:
+    correcting...
+    -5
+    correcting...
+    -4
+    correcting...
+    -3
+    correcting...
+    -2
+    correcting...
+    -1
+    correcti
+# areas list
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Code the for loop
+for rooms in areas:
+    print(rooms)
+
+<script.py> output:
+    11.25
+    18.0
+    20.0
+    10.75
+    9.5
+
+
+# areas list
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Change for loop to use enumerate() and update print()
+for index, area in enumerate(areas):
+    print("room " + str(index) + ": " + str(area))
+
+
+<script.py> output:
+    room 0: 11.25
+    room 1: 18.0
+    room 2: 20.0
+    room 3: 10.75
+    room 4: 9.5
