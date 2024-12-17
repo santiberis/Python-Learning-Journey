@@ -468,3 +468,6 @@ house = [["hallway", 11.25],
 # Build a for loop from scratch
 for room in house:
     print("the " + room[0] + " is " + str(room[1]) + " sqm")
+
+Officially finished intermediate python, did not learn anything new today but
+i don't want to lose my streak
